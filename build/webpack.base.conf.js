@@ -27,6 +27,8 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      // 定义别名和插件位置
+      'mui': path.resolve(__dirname, '../src/assets/mui/js/mui.js')
     }
   },
   module: {

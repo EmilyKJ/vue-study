@@ -6,17 +6,30 @@ import HomeContainer from '@/components/tabbar/HomeContainer.vue'
 import MemberContainer from '@/components/tabbar/MemberContainer.vue'
 import ShopcarContainer from '@/components/tabbar/ShopcarContainer.vue'
 import SearchContainer from '@/components/tabbar/SearchContainer.vue'
+import NewsList from '@/components/news/NewsList.vue'
+import NewsInfo from '@/components/news/NewsInfo.vue'
+import PhotoList from '@/components/photo/PhotoList.vue'
+import PhotoInfo from '@/components/photo/PhotoInfo.vue'
+import GoodsList from '@/components/goods/GoodsList.vue'
+import GoodsInfo from '@/components/goods/GoodsInfo.vue'
 
 Vue.use(Router)
 
 // 创建一个路由对象 并把路由对象暴露出去
 export default new Router({
   routes: [
-    { path: '/', redirect: '/home'},
+    // { path: '/', redirect: '/home'},
     { path: '/home', component: HomeContainer },
     { path: '/member', component: MemberContainer },
     { path: '/shopcar', component: ShopcarContainer },
-    { path: '/search', component: SearchContainer }
+    { path: '/search', component: SearchContainer },
+    { path: '/home/newsList', component: NewsList },
+    { path: '/home/newsInfo/:id', component: NewsInfo },
+    { path: '/home/photoList', component: PhotoList },
+    { path: '/home/photoInfo/:id', component: PhotoInfo },
+    { path: '/home/goodslist', component: GoodsList },
+    { path: '/home/goodsinfo', component: GoodsInfo },
+    { path: '*', redirect: '/home'}
   ],
   linkActiveClass: 'mui-active'  // 覆盖默认的路由高亮的类，默认的类叫做 router-link-active
 
