@@ -27,10 +27,7 @@
 <script>
     // 1. 导入 mui 的 js 文件
     import mui from '../../assets/mui/js/mui.min.js'
-    // 2. 初始化滑动控件
-    mui('.mui-scroll-wrapper').scroll({
-    deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
-    });
+   
     export default {
         data() {
             return {
@@ -41,6 +38,12 @@
         created() {
             this.getAllCategory(),
             this.getPhotoCateId(0)  //  默认进入页面就请求所有图片
+        },
+        mounted() {
+            // 2. 初始化滑动控件
+            mui('.mui-scroll-wrapper').scroll({
+            deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+            });
         },
         methods: {
             getAllCategory() { // 获取所有的图片分类

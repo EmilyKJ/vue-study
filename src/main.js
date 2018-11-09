@@ -2,14 +2,18 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+// 导入 vuex
+import store from './store'
+
+
 
 //2.1 导入 vue-resource 
 import vueResource from 'vue-resource'
 // 2.2 安装 vue-resource
 Vue.use(vueResource)
 
-// 导入vue-preview
-import VuePreview from 'vue-preview'
+// 导入vue2-preview
+import VuePreview from 'vue2-preview'
 // 安装
 Vue.use(VuePreview)
 
@@ -53,5 +57,6 @@ new Vue({
   el: '#app',
   components: { App }, 
   template: '<App/>',
-  router  //1.4 挂载 路由对象 到vm 实例上
+  router,  //1.4 挂载 路由对象 到vm 实例上
+  store  // 将 store 状态管理对象 挂载到 vm 实例上，可以让任何组件都能
 })

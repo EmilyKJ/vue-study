@@ -46,7 +46,7 @@
     }
 </script>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
     .newsInfo-container {
         padding: 0 5px;
         .title {

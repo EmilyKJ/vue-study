@@ -85,7 +85,7 @@
     }
 </script>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
     .cmt-container {
         h3 {
             font-size: 18px;
